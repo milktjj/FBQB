@@ -4,15 +4,13 @@ import com.iecas.oceanologybigdata.model.QBAdcp;
 import com.iecas.oceanologybigdata.model.QBAqd;
 import com.iecas.oceanologybigdata.model.QBCtd;
 import com.iecas.oceanologybigdata.model.QBInfo;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
-
+@CacheNamespace(implementation = com.iecas.oceanologybigdata.util.Datecache.class, size = 100000, readWrite = false)
 public interface QBMapper {
     @Select("SELECT id, lon, lat,depth FROM public.tbl_qbinfo")
-    @Results({
+        @Results({
             @Result(column = "id", property = "qbId"),
             @Result(column = "lon", property = "lon"),
             @Result(column = "lat", property = "lat"),

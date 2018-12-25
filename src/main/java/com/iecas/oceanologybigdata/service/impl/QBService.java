@@ -6,6 +6,7 @@ import com.iecas.oceanologybigdata.model.QBAqd;
 import com.iecas.oceanologybigdata.model.QBCtd;
 import com.iecas.oceanologybigdata.model.QBInfo;
 import com.iecas.oceanologybigdata.service.IQBService;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

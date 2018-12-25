@@ -3,6 +3,7 @@ package com.iecas.oceanologybigdata.service.impl;
 import com.iecas.oceanologybigdata.mapper.FBMapper;
 import com.iecas.oceanologybigdata.model.*;
 import com.iecas.oceanologybigdata.service.IFBService;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;

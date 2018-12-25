@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
 import javax.servlet.MultipartConfigElement;
@@ -15,7 +16,6 @@ public class OceanologybigdataApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(OceanologybigdataApplication.class, args);
-		System.out.println("hi,springboot");
 	}
 	//设置上传大小限制
 	@Bean

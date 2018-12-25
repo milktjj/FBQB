@@ -1,8 +1,11 @@
 package com.iecas.oceanologybigdata.model;
 
+import com.iecas.oceanologybigdata.util.DeepClone;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class FBFeng {
+public class FBFeng extends DeepClone {
     String time;
     //十分钟平均风速
     String avgWindSpeed_10M;

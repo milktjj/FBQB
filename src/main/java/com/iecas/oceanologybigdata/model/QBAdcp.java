@@ -1,8 +1,11 @@
 package com.iecas.oceanologybigdata.model;
 
+import com.iecas.oceanologybigdata.util.DeepClone;
+
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class QBAdcp {
+public class QBAdcp extends DeepClone {
     Timestamp timestamp;
     String date;
     String dateTime;

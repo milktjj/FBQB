@@ -1,10 +1,13 @@
 package com.iecas.oceanologybigdata.model;
 
+import com.iecas.oceanologybigdata.util.DeepClone;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class QBInfo {
+public class QBInfo extends DeepClone {
     int qbId;
     double lon;
     double lat;
@@ -43,7 +46,7 @@ public class QBInfo {
 
 
     public void setmm() {
-        if(qbAqds.size() > 0) {
+        if (qbAqds.size() > 0) {
             String aqd_Cu = getAqds_CuSpeed();
             String aqd_Cv = getAqds_CvSpeed();
             String aqd_Cw = getAqds_CwSpeed();
@@ -57,7 +60,7 @@ public class QBInfo {
             setAqds_minPressure(Double.parseDouble(aqd_pre.split(";")[0]));
             setAqds_maxPressure(Double.parseDouble(aqd_pre.split(";")[1]));
         }
-        if(qbAdcps.size() > 0) {
+        if (qbAdcps.size() > 0) {
             String adcp_Cu = getAdcp_Cu();
             String adcp_Cv = getAdcp_Cv();
             String adcp_Depth = getAdcp_Depth();
@@ -68,7 +71,7 @@ public class QBInfo {
             setAdcp_minDepth(Double.parseDouble(adcp_Depth.split(";")[0]));
             setAdcp_maxDepth(Double.parseDouble(adcp_Depth.split(";")[1]));
         }
-        if(qbCtds.size() > 0) {
+        if (qbCtds.size() > 0) {
             String ctd_Temp = getCtd_Temperature();
             String ctd_Sal = getCtd_Sality();
             String ctd_Pre = getCtd_Pressure();

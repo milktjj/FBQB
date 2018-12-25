@@ -1,9 +1,9 @@
 package com.iecas.oceanologybigdata.service;
 
 import com.iecas.oceanologybigdata.model.*;
+import org.apache.ibatis.annotations.CacheNamespace;
 
 import java.util.List;
-
 public interface IFBService {
     /**
      * 根据浮标号获取浮标信息

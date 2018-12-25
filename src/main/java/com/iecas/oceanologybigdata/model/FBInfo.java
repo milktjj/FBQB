@@ -1,10 +1,13 @@
 package com.iecas.oceanologybigdata.model;
 
+import com.iecas.oceanologybigdata.util.DeepClone;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class FBInfo {
+public class FBInfo extends DeepClone {
     String fbId;
     double lon;
     double lat;
@@ -22,12 +25,7 @@ public class FBInfo {
     List<FBFeng> fbFengs;
 
 
-
-
-
-
-
-    public List<FBFeng> getFbFengs() {
+    List<FBFeng> getFbFengs() {
         return fbFengs;
     }
 

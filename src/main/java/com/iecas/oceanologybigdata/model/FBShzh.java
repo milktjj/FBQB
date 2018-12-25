@@ -1,8 +1,11 @@
 package com.iecas.oceanologybigdata.model;
 
+import com.iecas.oceanologybigdata.util.DeepClone;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class FBShzh {
+public class FBShzh extends DeepClone {
     String time;
     //浊度
     String turbidity;

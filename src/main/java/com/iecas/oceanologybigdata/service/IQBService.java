@@ -4,6 +4,7 @@ import com.iecas.oceanologybigdata.model.QBAdcp;
 import com.iecas.oceanologybigdata.model.QBAqd;
 import com.iecas.oceanologybigdata.model.QBCtd;
 import com.iecas.oceanologybigdata.model.QBInfo;
+import org.apache.ibatis.annotations.CacheNamespace;
 
 import java.util.List;
 

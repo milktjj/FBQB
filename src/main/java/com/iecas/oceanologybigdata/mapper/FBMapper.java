@@ -1,12 +1,13 @@
 package com.iecas.oceanologybigdata.mapper;
 
 import com.iecas.oceanologybigdata.model.*;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
-
+@CacheNamespace(implementation = com.iecas.oceanologybigdata.util.Datecache.class, size = 100000, readWrite = false)
 public interface FBMapper {
     @Select("SELECT \"fbId\", lon, lat, description, depth,icon FROM public.tbl_fbinfo WHERE \"fbId\"=#{0}")
     @Results({
